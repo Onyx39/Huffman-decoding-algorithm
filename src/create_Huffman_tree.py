@@ -30,12 +30,19 @@ def find_minimum_frequencies_trees (tree_list) :
 
 def create_new_tree (t1, t2, tree_liste) :
     freq = t1.root.frequency + t2.root.frequency
-    newNode = Node('new Tree', freq, t1, t2)
+    new_label = t1.root.label + t2.root.label
+    newNode = Node(new_label, freq, t1, t2)
     newTree = Binary_tree(newNode)
     
     tree_liste.remove(t1)
     tree_liste.remove(t2)
     tree_liste.append(newTree)
+
+    '''
+    for i in tree_liste :
+        print(i)
+    print("")
+    '''
 
     return tree_liste
 
@@ -46,7 +53,7 @@ def create_Huffman_tree (tree_list) :
         tree_list = create_new_tree(t1, t2, tree_list)
     return tree_list[0]
 
-
+'''
 if __name__ == "__main__" :
     test = create_all_trees(alphabet_dictionary)    
     
@@ -68,4 +75,5 @@ if __name__ == "__main__" :
     print(" ")
     print(tree.root.right_child)
     print(tree.root.right_child.root.left_child)
+    '''
     
