@@ -2,6 +2,7 @@
 
 import get_caracters as gc
 import create_Huffman_tree as ht
+import text_decoding as td
 
 
 alphabet_file_path = 'C:/Users/val_p/Desktop/PROJ631/1_Python_Decompression_Huffman/exemple_freq.txt'
@@ -18,8 +19,12 @@ def create_huffman_tree (alphabet_file_path, compressed_file_path) :
 
     return(huffman_tree)
 
-print(create_huffman_tree(alphabet_file_path, compressed_file_path))
+tree = create_huffman_tree(alphabet_file_path, compressed_file_path)
 
+binary_code = td.get_binary_code(compressed_file_path)
+print(binary_code)
 
+texte_final = td.translate_binary_code(binary_code, tree)
+print(texte_final)
 
 

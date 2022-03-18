@@ -20,6 +20,13 @@ class Node :
     def add_right_child (self, label):
         self.fils_d = Node(label, None, None)
         return self
+
+    def is_leaf (self) :
+        if self.left_child == None and self.right_child == None : 
+            return True
+        return False
+
+    
     
 class Binary_tree :
     """Classe qui représente un arbre binaire"""
