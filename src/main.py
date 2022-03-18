@@ -8,6 +8,7 @@ import get_compresion_rate as cr
 
 alphabet_file_path = 'C:/Users/val_p/Desktop/PROJ631/1_Python_Decompression_Huffman/exemple_freq.txt'
 compressed_file_path = 'C:/Users/val_p/Desktop/PROJ631/1_Python_Decompression_Huffman/exemple_comp.bin'
+decompressed_file_path = 'C:/Users/val_p/Desktop'
 
 def create_huffman_tree (alphabet_file_path, compressed_file_path) :
     alphabet_file = open(alphabet_file_path, 'r')
@@ -38,3 +39,12 @@ def get_truc_average (message, path) :
     return size/nb_caracters
 
 get_truc_average(texte_final, compressed_file_path)
+
+def get_decompressed_file (path) :
+    message = td.translate_binary_code(binary_code, tree)
+    new_file = open(path, 'w')
+    new_file.write(message)
+    new_file.close()
+
+#get_decompressed_file(decompressed_file_path)
+#I don t have the permission
