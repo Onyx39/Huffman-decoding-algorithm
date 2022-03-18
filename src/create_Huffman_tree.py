@@ -23,7 +23,6 @@ def include_new_tree (new_tree, list) :
     new_list = list[2:cand+1]
     new_list.append(new_tree)
     new_list += list[cand+1:]
-    print(len(new_list))
     return new_list
 
 '''
