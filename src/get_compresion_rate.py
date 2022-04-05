@@ -1,4 +1,5 @@
-#comment
+#This file must be import in the main code.
+#It gets the compression rate of the compressed file.
 
 def get_file_size (path) :
     file = open(path, 'r')

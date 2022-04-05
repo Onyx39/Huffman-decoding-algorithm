@@ -1,4 +1,4 @@
-#This code has to be imported in the main code
+#This code has to be imported in the create_Huffman_tree file.
 #It creates the Haufman tree with the alphabet
 
 

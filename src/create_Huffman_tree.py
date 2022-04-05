@@ -1,4 +1,5 @@
-# This code create the Huffman Tree
+#This file must be import in the main code.
+#It creates the Huffman Tree.
 
 from classes.graph_classes import Node
 from classes.graph_classes import Binary_tree
@@ -25,23 +26,6 @@ def include_new_tree (new_tree, list) :
     new_list += list[cand+1:]
     return new_list
 
-'''
-def find_minimum_frequencies_trees (tree_list) :
-    if tree_list[0].root.frequency <= tree_list[1].root.frequency :
-        t1, t2 = tree_list[0], tree_list[1]
-    else : t1, t2 = tree_list[1], tree_list[0]
-
-    sum_freq = t1.root.frequency + t2.root.frequency
-
-    for i in range (len(tree_list)) :
-        for j in range (i + 1, len(tree_list)) :
-            if tree_list[i].root.frequency + tree_list[j].root.frequency < sum_freq :
-                if tree_list[i].root.frequency <= tree_list[j].root.frequency :
-                    t1, t2 = tree_list[i], tree_list[j]
-                else : t1, t2 = tree_list[j], tree_list[i]
-    return t1, t2
-'''
-
 def create_new_tree (t1, t2, tree_liste) :
 
     freq = t1.root.frequency + t2.root.frequency
@@ -51,9 +35,9 @@ def create_new_tree (t1, t2, tree_liste) :
     
     new_tree_liste = include_new_tree(newTree, tree_liste)
 
-    for i in tree_liste :
-        print(i)
-    print("")
+    #for i in tree_liste :
+    #    print(i)
+    #print("")
 
     return new_tree_liste
 

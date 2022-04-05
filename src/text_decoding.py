@@ -1,3 +1,7 @@
+#This file must be import in the main code.
+#It decods the compressed file.
+
+
 from classes.graph_classes import Node
 
 def get_binary_code (compressed_file_path) :
@@ -10,7 +14,6 @@ def get_binary_code (compressed_file_path) :
             cand = '0' + cand
         str += cand
     return str
-
 
 
 def translate_binary_code(binary_code, huffman_tree) :
