@@ -4,7 +4,7 @@
 import get_caracters as gc
 import create_Huffman_tree as ht
 import text_decoding as td
-import get_compresion_rate as cr
+import get_compression_rate as cr
 import paths as p
 
 
@@ -51,3 +51,4 @@ def run_the_whole_programm () :
     get_decompressed_file(p.alphabet_file_path, p.compressed_file_path, p.decompressed_file_path)
 
 run_the_whole_programm()
+
