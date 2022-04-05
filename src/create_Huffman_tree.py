@@ -8,7 +8,6 @@ from classes.graph_classes import Binary_tree
 def create_all_trees (dictionary) :
     tree_list = []
     for i in dictionary :
-        #print(i)
         N = Node(i, dictionary[i], None, None)
         T = Binary_tree(N)
         tree_list.append(T)
@@ -35,10 +34,6 @@ def create_new_tree (t1, t2, tree_liste) :
     
     new_tree_liste = include_new_tree(newTree, tree_liste)
 
-    #for i in tree_liste :
-    #    print(i)
-    #print("")
-
     return new_tree_liste
 
 def create_Huffman_tree (tree_list) :
@@ -48,27 +43,5 @@ def create_Huffman_tree (tree_list) :
         tree_list = create_new_tree(t1, t2, tree_list)
     return tree_list[0]
 
-'''
-if __name__ == "__main__" :
-    test = create_all_trees(alphabet_dictionary)    
-    
-    print(len(test))
-    print(test)
-    print(" ")
-    t1, t2 = find_minimum_frequencies_trees(test)
-    new_liste = create_new_tree(t1, t2, test)
-    
-    for i in new_liste :
-        print(i)
-    print(len(new_liste))
-    print(" ")
-    tree = create_Huffman_tree(test)
-    print(tree)
-    print(tree.root.left_child)
-    print(tree.root.right_child.left_child.left_child)
-    print(tree.root.right_child.left_child.right_child)
-    print(" ")
-    print(tree.root.right_child)
-    print(tree.root.right_child.left_child)
-    '''
+
     
