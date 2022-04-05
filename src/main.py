@@ -30,11 +30,10 @@ def get_final_text (alphabet_file_path, compressed_file_path) :
 def get_efficiency (alphabet_file_path, compressed_file_path, path) :
     tree, binary_code, texte_final = get_final_text(p.alphabet_file_path, p.compressed_file_path)
     message = td.translate_binary_code(binary_code, tree)
-    size = cr.get_file_size(p.compressed_file_path)
-    nb_caracters = len(message) - 2
-    print("The compressed file contains " + str(nb_caracters/size) + " caracters/bytes.")
-    print("The compression rate is " + str(round(size/nb_caracters*100, 2)), '%.')
-    return size/nb_caracters
+    compression_rate = cr.get_compression_rate(p.compressed_file_path, p.decompressed_file_path)
+    print("The compressed file contains " + str(round(1/compression_rate, 2)) + " caracters/bytes.")
+    print("The compression rate is " + str(round(compression_rate*100, 2)), '%.')
+    return compression_rate
 
 
 def get_decompressed_file (alphabet_file_path, compressed_file_path, path) :
