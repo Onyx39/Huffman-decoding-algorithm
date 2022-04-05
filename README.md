@@ -1,4 +1,4 @@
-# Huffman-decoding-algorithm-project
+# Huffman-decoding-algorithm
 This is the Huffman decoding algorithm implemented in Python.
 This is one of the projects I am doing as student in Polytech Annecy.
 
