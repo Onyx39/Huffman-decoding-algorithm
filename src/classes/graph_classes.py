@@ -1,4 +1,4 @@
-#This code has to be imported in the main code
+#This code has to be imported in the create_Huffman_tree file.
 #It creates the Haufman tree with the alphabet
 
 
@@ -20,6 +20,13 @@ class Node :
     def add_right_child (self, label):
         self.fils_d = Node(label, None, None)
         return self
+
+    def is_leaf (self) :
+        if self.left_child == None and self.right_child == None : 
+            return True
+        return False
+
+    
     
 class Binary_tree :
     """Classe qui représente un arbre binaire"""
