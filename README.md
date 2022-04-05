@@ -8,7 +8,7 @@ First, you need a compressed text (compressed by the Huffman method) and the alp
 Secondly, you have to create an empty text file (with Notepad for example).
 
 # Before you run the code 
-You need to fill the requirements and adapt the 3 paths in the main code to your own machine.
+You need to fill the requirements and adapt the 3 paths in the src/paths.py file to your own machine.
 
 # Results
 The program prints some information about the compression rate in the console.
