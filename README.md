@@ -12,5 +12,6 @@ You need to fill the requirements and adapt the 3 paths in the src/paths.py file
 
 # Results
 The program prints some information about the compression rate in the console.
+
 Moreover, it writes the decoded text in your empty file. 
 You just have to open it to read the text.
