@@ -44,10 +44,10 @@ def get_decompressed_file (alphabet_file_path, compressed_file_path, path) :
     new_file.close()
 
 def run_the_whole_programm () :
+    get_decompressed_file(p.alphabet_file_path, p.compressed_file_path, p.decompressed_file_path)
     print(" ")
     get_efficiency(p.alphabet_file_path, p.compressed_file_path, p.decompressed_file_path)
     print(" ")
-    get_decompressed_file(p.alphabet_file_path, p.compressed_file_path, p.decompressed_file_path)
 
 run_the_whole_programm()
 

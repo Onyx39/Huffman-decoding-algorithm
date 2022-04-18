@@ -5,7 +5,7 @@ def get_alphabet_size(file_lines) :
     return int(file_lines[0][0])
 
 def extract_frequency (line) :
-    end = len(line) - 1
+    end = len(line)
     frequency = line[2:end]
     return int(frequency)
 
