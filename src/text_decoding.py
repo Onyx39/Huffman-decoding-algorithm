@@ -1,13 +1,21 @@
-#This file must be import in the main code.
-#It decodes the compressed file.
+#This file decodes the compressed file.
+#This file is imported to the main file.
 
 
 from classes.graph_classes import Node
 import get_caracters as gc
 import paths as p
 
+
 def get_binary_code (compressed_file_path) :
-    str=""
+
+    """
+    Input : The path to the compressed file as a string
+    Output : A string
+    This function returns the binary code of the compressed file.
+    """
+
+    str = ""
     with open(compressed_file_path, 'rb') as f:
         contents = f.read()
         for i in contents :
@@ -19,7 +27,14 @@ def get_binary_code (compressed_file_path) :
 
 
 def translate_binary_code(binary_code, huffman_tree) :
-    text =""
+
+    """
+    Inputs : The binary code of the compressed file as a string and the Huffman tree as a binary tree
+    Output : A string
+    This function returns the decoded text as a string.
+    """
+
+    text = ""
     alphabet_file = open(p.alphabet_file_path, 'r')
     lines_of_file = alphabet_file.readlines()
     lenght = gc.create_alphabet_dictionary(lines_of_file)[1]

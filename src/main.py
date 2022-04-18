@@ -1,5 +1,5 @@
 #This is the main code you have to run.
-#Don't forget to create an enmpty text file and to update all the paths !
+#Don't forget to create an empty text file on your machine and to update all the paths in the paths.py file!
 
 import get_caracters as gc
 import create_Huffman_tree as ht
@@ -16,7 +16,7 @@ def create_huffman_tree (alphabet_file_path, compressed_file_path) :
     alphabet_dictionnary = gc.create_alphabet_dictionary(lines_of_file)[0]
     huffman_tree = ht.create_Huffman_tree(ht.create_all_trees(alphabet_dictionnary))
 
-    return(huffman_tree)
+    return huffman_tree
 
 
 def get_final_text (alphabet_file_path, compressed_file_path) :
@@ -24,7 +24,7 @@ def get_final_text (alphabet_file_path, compressed_file_path) :
 
     binary_code = td.get_binary_code(p.compressed_file_path)
     texte_final = td.translate_binary_code(binary_code, tree)
-    return(tree, binary_code, texte_final)
+    return tree, binary_code, texte_final
 
 
 def get_efficiency (alphabet_file_path, compressed_file_path, path) :
