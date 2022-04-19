@@ -1,5 +1,5 @@
-#This code implements two classes : Node and Binary_tree which repesnets binary trees.
-#This code is imported in the create_Huffman_tree file, in the text_decoding file and in the main file.
+#This file implements two classes : Node and Binary_tree which repesnets binary trees.
+#This file is imported in the create_Huffman_tree file, in the text_decoding file and in the main file.
 
 
 class Node :
@@ -9,21 +9,13 @@ class Node :
     """
 
     def __init__(self, label, frequency, left_child, right_child):
-        self.label = label
-        self.frequency = frequency
-        self.left_child = left_child
-        self.right_child = right_child 
+        self.label = label #Label is a string
+        self.frequency = frequency #Frequency is an integer
+        self.left_child = left_child #Left_child is a Node or None
+        self.right_child = right_child #Right_child is a Node or None
         
     def __str__ (self) :
         return self.label
-    
-    def add_left_child (self, label):
-        self.fils_g = Node(label, None, None)
-        return self
-    
-    def add_right_child (self, label):
-        self.fils_d = Node(label, None, None)
-        return self
 
     def is_leaf (self) :
 
