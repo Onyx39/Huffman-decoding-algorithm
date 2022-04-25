@@ -9,5 +9,5 @@ alphabet_file_path = 'C:/Users/val_p/Desktop/PROJ631/1_Python_Decompression_Huff
 #Enter the path to get the file that contains the compressed text.
 compressed_file_path = 'C:/Users/val_p/Desktop/PROJ631/1_Python_Decompression_Huffman/exemple_comp.bin'
 
-#Enter the path to get the empty file that will contain the decoded text.
-decompressed_file_path = 'C:/Users/val_p/Desktop/message_Andrew.txt'
+#Enter the path to the place you want to put the decoded message.
+decompressed_file_path = 'C:/Users/val_p/Desktop/message.txt'

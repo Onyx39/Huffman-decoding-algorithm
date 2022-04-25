@@ -1,5 +1,5 @@
 #This is the main code you have to run.
-#Don't forget to create an empty text file on your machine and to update all the paths in the paths.py file!
+#Don't forget to modify all the paths in the paths.py file!
 
 
 import get_caracters as gc
@@ -9,7 +9,7 @@ import get_compression_rate as cr
 import paths as p
 
 
-def create_huffman_tree (alphabet_file_path, compressed_file_path) :
+def get_the_tree (alphabet_file_path, compressed_file_path) :
 
     """
     Inputs : The paths to the alphabet file and to the compressed file
@@ -33,7 +33,7 @@ def get_final_text (alphabet_file_path, compressed_file_path) :
     It also returns the huffman tree.
     """
     
-    tree = create_huffman_tree(p.alphabet_file_path, p.compressed_file_path)
+    tree = get_the_tree(p.alphabet_file_path, p.compressed_file_path)
     binary_code = td.get_binary_code(p.compressed_file_path)
     texte_final = td.translate_binary_code(binary_code, tree)
     return tree, binary_code, texte_final
