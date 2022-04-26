@@ -71,7 +71,7 @@ def get_decompressed_file (alphabet_file_path, compressed_file_path, path) :
     new_file.close()
 
 
-def run_the_whole_programm () :
+def run_the_whole_program () :
     
     """
     Input : Nothing
@@ -84,5 +84,5 @@ def run_the_whole_programm () :
     get_efficiency(p.alphabet_file_path, p.compressed_file_path, p.decompressed_file_path)
     print(" ")
 
-run_the_whole_programm()
+run_the_whole_program()
 
