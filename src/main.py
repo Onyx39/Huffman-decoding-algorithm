@@ -9,10 +9,10 @@ import get_compression_rate as cr
 import paths as p
 
 
-def get_the_tree (alphabet_file_path, compressed_file_path) :
+def get_the_tree (alphabet_file_path) :
 
     """
-    Inputs : The paths to the alphabet file and to the compressed file
+    Input : The path to the alphabet file
     Output : A binary tree
     This function creates the Huffman tree with the paths given in the paths.py file.
     """
@@ -33,7 +33,7 @@ def get_final_text (alphabet_file_path, compressed_file_path) :
     It also returns the huffman tree.
     """
     
-    tree = get_the_tree(p.alphabet_file_path, p.compressed_file_path)
+    tree = get_the_tree(p.alphabet_file_path)
     binary_code = td.get_binary_code(p.compressed_file_path)
     texte_final = td.translate_binary_code(binary_code, tree)
     return tree, binary_code, texte_final
