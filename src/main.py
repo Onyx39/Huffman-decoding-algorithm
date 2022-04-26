@@ -46,7 +46,6 @@ def get_efficiency (alphabet_file_path, compressed_file_path, path) :
     Output : A float
     This function returns the compresion rate of the compressed file.
     This function prints some information about the compression rate in the console.
-    The file that contains the final code must be filled by programm.
     """
     
     tree, binary_code, texte_final = get_final_text(p.alphabet_file_path, p.compressed_file_path)
@@ -62,7 +61,7 @@ def get_decompressed_file (alphabet_file_path, compressed_file_path, path) :
     """
     Inputs : The paths to the alphabet file, to the compressed file and to the empty file
     Output : Nothing
-    This file write the decoded text in the empty file.
+    This function creates a file taht contains the decoded data.
     """
     
     tree, binary_code, texte_final = get_final_text(p.alphabet_file_path, p.compressed_file_path)
@@ -77,9 +76,7 @@ def run_the_whole_programm () :
     """
     Input : Nothing
     Output : Nothing
-    This function run thhe whole programm : 
-    it writes the decoded message in the empty file and prints the compression rate.
-    
+    This function runs the whole programm : it saves the decoded data and prints the compression rate.
     """
     
     get_decompressed_file(p.alphabet_file_path, p.compressed_file_path, p.decompressed_file_path)
