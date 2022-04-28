@@ -2,8 +2,8 @@
 #This file is imported in the main file.
 
 
-from classes.graph_classes import Node
-from classes.graph_classes import Binary_tree
+from classes.Node import Node
+from classes.Binary_Tree import Binary_tree
 
 
 def create_all_trees (dictionary) :

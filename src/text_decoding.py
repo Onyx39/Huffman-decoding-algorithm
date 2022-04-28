@@ -2,7 +2,7 @@
 #This file is imported to the main file.
 
 
-from classes.graph_classes import Node
+from classes.Node import Node
 import get_caracters as gc
 import paths as p
 
