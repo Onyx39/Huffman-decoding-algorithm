@@ -1,5 +1,5 @@
-#This file implements two classes : Node and Binary_tree which repesnets binary trees.
-#This file is imported in the create_Huffman_tree file, in the text_decoding file and in the main file.
+#This file implements the class 'Node'
+#This file is imported in the create_Huffman_tree.py file and in the text_decoding.py file
 
 
 class Node :
@@ -26,16 +26,3 @@ class Node :
         if self.left_child == None and self.right_child == None : 
             return True
         return False
-
-    
-class Binary_tree :
-
-    """
-    This class represent a binary tree.
-    A binary tree is define by its root.
-    """
-    def __init__(self, root):
-        self.root = root
-    
-    def __str__ (self) :
-        return self.root.label + ' : ' + str(self.root.frequency)
