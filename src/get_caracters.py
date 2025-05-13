@@ -1,6 +1,7 @@
-#This code gets the alphabet of the file and the frequencies of the caracters
-#This file is imported in the text_decoding file and in the main file.
-
+"""
+This code gets the alphabet of the file and the frequencies of the caracters
+This file is imported in the text_decoding file and in the main file.
+"""
 
 def extract_frequency (line) :
 
@@ -20,10 +21,11 @@ def create_alphabet_dictionary (file_lines) :
     """
     Input : The list of strings of the alphabet file
     Outputs : A dictionnary and an integer
-    This function returns a dictionnary that contains all the caracters of the decoded file and their frecencies in the text.
+    This function returns a dictionnary that contains all the caracters of the decoded file
+        and their frecencies in the text.
     Moreover, it returns the lenght of the decoded text.
     """
-    
+
     dictionary = {}
     lenght = 0
     for i in range (1, len(file_lines)) :

@@ -1,6 +1,7 @@
-#This file gets the compression rate of the compressed file.
-#This file is imported in the main file.
-
+"""
+This file gets the compression rate of the compressed file.
+This file is imported in the main file.
+"""
 
 def get_file_size (path) :
 
@@ -10,13 +11,13 @@ def get_file_size (path) :
     This function returns the size of a file.
     """
 
-    file = open(path, 'r')
-    file_size = 0
-    while True :
-        element = file.read(1)
-        if not element :
-            break
-        else :
+    with open(path, 'rb') as file:
+        # file = open(path, 'r')
+        file_size = 0
+        while True :
+            element = file.read(1)
+            if not element :
+                break
             file_size += 1
     return file_size
 
@@ -32,4 +33,4 @@ def get_compression_rate (compressed_file_path, normal_file_path) :
     compressed_file_size = get_file_size(compressed_file_path)
     normal_file_size = get_file_size(normal_file_path)
     result = compressed_file_size/normal_file_size
-    return result                 
+    return result
